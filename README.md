@@ -7,16 +7,6 @@ The objectives/motivations behind this project is to develop a responsive web ap
 
 Furthermore, the design plan will be presented to stakeholders, and upon approval, the project will proceed with a development following Agile methodologies, with regular sprints and iterations based on feedback Let this section explain the objectives or the motivation behind this project.
 
-This template should help get you started developing with Vue 3 in Vite.
-
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
 ## Project Setup
 
 ```sh
