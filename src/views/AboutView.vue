@@ -7,7 +7,7 @@ const creatures = ref([]);
 const currentIndex = ref(0)
 
 async function refreshData() {
-  axios.get(API_URL + "api/FlirtApp/GetCreatures").then(
+  axios.get(API_URL + "api/FlirtApp/GetPokemon").then(
     (response) => {
       creatures.value = response.data
       currentIndex.value = 0;
