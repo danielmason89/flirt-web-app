@@ -103,8 +103,8 @@ button {
   border: none;
   margin: 0;
   text-decoration: none;
-  background: #000; /* Change as per your theme */
-  color: #fff; /* Change as per your theme */
+  background: #000;
+  color: #fff;
   font-size: 1rem;
   cursor: pointer;
   text-align: center;
@@ -114,5 +114,5 @@ button {
 input[type='button']:hover,
 input[type='submit']:hover,
 button:hover {
-  background-color: #444; /* Change as per your theme */
+  background-color: #d9d9d9;
 }

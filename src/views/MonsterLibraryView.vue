@@ -33,7 +33,7 @@ function previousCreature() {
 </script>
 
 <template>
-    <div class="about">
+    <div class="monster-library">
         <h1>This is the monster library page</h1>
         <div v-if="creatures.length > 0">
             <p>{{ creatures[currentIndex].description }}</p>
@@ -46,4 +46,9 @@ function previousCreature() {
     </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.monster-library,
+.loading {
+    height: 100vh;
+}
+</style>
