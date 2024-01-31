@@ -1,31 +1,118 @@
+/* Reset margins, paddings, and borders */
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
   margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section {
+  display: block;
+}
+
+/* Remove list styles on ul, ol elements */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Set a base font family and size */
+body,
+html {
+  font-size: 100%; /* 16px by default */
+  line-height: 1.6;
+  font-family: Arial, Helvetica, sans-serif; /* Change as per your preference */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Make images responsive */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Remove default link styling */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Table styles */
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+/* Basic styles for forms */
+input,
+button,
+textarea,
+select {
+  font: inherit; /* Apply font styles from body */
+  color: inherit;
+}
+
+/* Remove default browser styling on buttons */
+button {
+  background: none;
+  cursor: pointer;
+}
+
+/* Set base styles for headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
   font-weight: normal;
 }
 
+/* Remove blue outline from focused elements for a cleaner look */
+:focus {
+  outline: none;
+}
+
+/* Basic styles for handling overflow */
+html,
 body {
-  transition:
-    color 0.5s,
-    background-color 0.5s;
-  line-height: 1.6;
-  font-family:
-    Inter,
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    Oxygen,
-    Ubuntu,
-    Cantarell,
-    'Fira Sans',
-    'Droid Sans',
-    'Helvetica Neue',
-    sans-serif;
-  font-size: 15px;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+/* Additional styles for input and button elements */
+input[type='button'],
+input[type='submit'],
+button {
+  display: inline-block;
+  border: none;
+  margin: 0;
+  text-decoration: none;
+  background: #000; /* Change as per your theme */
+  color: #fff; /* Change as per your theme */
+  font-size: 1rem;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s;
+}
+
+input[type='button']:hover,
+input[type='submit']:hover,
+button:hover {
+  background-color: #444; /* Change as per your theme */
 }
