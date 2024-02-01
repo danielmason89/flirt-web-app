@@ -30,4 +30,4 @@ COPY ./nginx/default.conf /etc/nginx/conf.d/default.conf
 EXPOSE 80
 
 # start nginx to serve the application
-CMD ["nginx", "-g", "deamon off;"]
+CMD ["nginx", "-g", "daemon off;"]
