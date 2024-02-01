@@ -7,8 +7,12 @@ import { useRoute } from 'vue-router'
 const mobileMenuOpen = ref(false)
 const route = useRoute()
 
+const toggleNavbar = () => {
+  mobileMenuOpen.value = false;
+}
+
 watch(route, () => {
-  // showMobileMenu.value = false
+  mobileMenuOpen.value = false
 })
 </script>
 
@@ -40,7 +44,7 @@ watch(route, () => {
       </div>
     </nav>
   </div>
-  <Dialog as="div" class="lg:hidden" @close="mobileMenuOpen = false" :open="mobileMenuOpen">
+  <Dialog as="div" class="lg:hidden" @close="toggleNavbar" :open="mobileMenuOpen">
     <div class="fixed inset-0 z-50" />
     <DialogPanel
       class="fixed inset-y-0 right-0 z-50 w-full px-6 py-6 overflow-y-auto bg-white sm:max-w-sm sm:ring-1 sm:ring-gray-700/10">
@@ -53,7 +57,7 @@ watch(route, () => {
               d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
           </svg>
         </router-link>
-        <button type="button" class="-m-2.5 rounded-md p-2.5" @click="mobileMenuOpen = false">
+        <button type="button" class="-m-2.5 rounded-md p-2.5" @click="toggleNavbar">
           <span class="sr-only">Close menu</span>
           <XMarkIcon class="w-6 h-6" aria-hidden="true" />
         </button>
@@ -62,13 +66,16 @@ watch(route, () => {
         <div class="-my-6 divide-y divide-gray-500/10">
           <div class="py-6 space-y-2">
             <router-link to="/"
-              class="block px-3 py-2 -mx-3 text-base font-semibold leading-7 text-gray-900 rounded-lg hover:bg-gray-50">Home</router-link>
+              class="block px-3 py-2 -mx-3 text-base font-semibold leading-7 text-gray-900 rounded-lg hover:bg-gray-50"
+              @click="toggleNavbar">Home</router-link>
             <router-link to="/about"
-              class="block px-3 py-2 -mx-3 text-base font-semibold leading-7 text-gray-900 rounded-lg hover:bg-gray-50">About</router-link>
+              class="block px-3 py-2 -mx-3 text-base font-semibold leading-7 text-gray-900 rounded-lg hover:bg-gray-50"
+              @click="toggleNavbar">About</router-link>
           </div>
           <div class="py-6">
             <router-link to="/monster-library"
-              class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Monster
+              class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+              @click="toggleNavbar">Monster
               Library</router-link>
           </div>
         </div>
