@@ -39,7 +39,6 @@ const values = ref([
       'Ipsa in earum deserunt aut. Quos minus aut animi et soluta. Ipsum dicta ut quia eius. Possimus reprehenderit iste aspernatur ut est velit consequatur distinctio.',
   },
 ])
-
 </script>
 
 <template>

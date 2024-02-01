@@ -27,7 +27,7 @@ COPY --from=build-stage /app/dist /usr/share/nginx/html
 COPY ./nginx/default.conf /etc/nginx/conf.d/default.conf
 
 # Expose the port 80
-EXPOSE 80
+EXPOSE 8080
 
 # start nginx to serve the application
 CMD ["nginx", "-g", "deamon off;"]
