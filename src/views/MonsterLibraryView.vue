@@ -1,7 +1,7 @@
 <script setup lang="ts">
 
 import axios from 'axios';
-import { ref, onMounted, defineProps, defineEmits } from 'vue';
+import { ref, onMounted } from 'vue';
 
 const props = defineProps({
     profileImage: String,
