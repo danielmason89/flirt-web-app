@@ -6,7 +6,7 @@ services:
       dockerfile: Dockerfile
     container_name: flirt-app
     ports:
-      - 8080:80
+      - 80:80
 
   nginx:
     image: nginx:alpine
