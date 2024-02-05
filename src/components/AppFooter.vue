@@ -1,4 +1,4 @@
-<script lang="ts">
+<script setup lang="ts">
 </script>
 
 <template>
@@ -59,7 +59,7 @@
     text-align: center;
     padding: 1rem 0;
     margin-top: 3rem;
-    position: relative;
+    position: fixed;
     left: 0;
     bottom: 0;
     width: 100vw;

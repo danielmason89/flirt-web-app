@@ -33,6 +33,8 @@ watch(route, () => {
         </button>
       </div>
       <div class="hidden lg:flex lg:gap-x-12">
+
+        <router-link to="/" class="text-sm font-semibold leading-6 text-gray-900">Home</router-link>
         <router-link to="/about" class="text-sm font-semibold leading-6 text-gray-900">About</router-link>
       </div>
       <div class="hidden lg:flex lg:flex-1 lg:justify-end">

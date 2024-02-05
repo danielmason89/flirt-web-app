@@ -1,5 +1,6 @@
 <script setup lang="ts">
 
+import FlirtCard from '@/components/FlirtCard.vue';
 import axios from 'axios';
 import { ref, onMounted } from 'vue';
 
@@ -55,6 +56,7 @@ function previousCreature() {
 
 <template>
     <div class="monster-library">
+        <FlirtCard />
         <div v-if="creatures.length > 0">
             <div class="card">
                 <img class="profile-image" :src="profileImage" alt="Profile picture">

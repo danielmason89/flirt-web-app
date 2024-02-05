@@ -18,7 +18,10 @@
       "src/**/*.ts",
       "src/**/*.d.ts",
       "src/**/*.tsx",
-      "src/**/*.vue"
+      "src/**/*.vue",
+      ".eslintrc.cjs",
+      "src/types",
+      "tailwind.config.js"
     ],
     "exclude": ["node_modules"]
   }

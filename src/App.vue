@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import Navigation from "./components/AppNavigationBar.vue";
 import Footer from "./components/AppFooter.vue";
 
@@ -54,7 +54,6 @@ body {
 }
 
 /* Route Animations */
-
 .route-enter-from {
   opacity: 0;
   transform: translateX(0px);
