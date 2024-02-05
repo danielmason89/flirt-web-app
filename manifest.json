@@ -1,0 +1,15 @@
+{
+  "short_name": "Flirt",
+  "name": "Flirt - A sass monster connection product",
+  "icons": [
+    {
+      "src": "path/to/icon.png",
+      "sizes": "144x144",
+      "type": "./src/assets/icon.svg"
+    }
+  ],
+  "start_url": "/index.html",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}

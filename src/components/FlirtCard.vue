@@ -1,30 +1,144 @@
 <script setup lang="ts">
-import { HeartIcon, XMarkIcon } from '@heroicons/vue/24/outline';
 
+import { ref, onMounted } from 'vue';
+
+interface Card {
+    imageUrl: string;
+    dismissing: boolean;
+}
+
+let cards = ref<Card[]>([]);
+let cardCount = ref(0);
+
+const urls = [
+    'https://source.unsplash.com/random/1000x1000/?sky',
+    'https://source.unsplash.com/random/1000x1000/?landscape',
+    'https://source.unsplash.com/random/1000x1000/?ocean',
+    'https://source.unsplash.com/random/1000x1000/?moutain',
+    'https://source.unsplash.com/random/1000x1000/?forest'
+];
+
+// function appendNewCard() {
+//     cards.value.push({
+//         imageUrl: urls[cardCount.value % urls.length],
+//         dismissing: false
+//     });
+//     cardCount.value++;
+// }
+
+// onMounted(() => {
+//     for (let i = 0; i < 5; i++) {
+//         appendNewCard();
+//     }
+// });
+
+// DOM
+const swiper = document.querySelector('#swiper');
+const like = document.querySelector('#like');
+const dislike = document.querySelector('#dislike');
+
+// // functions
+// function appendNewCard() {
+//     const card = new Card({
+//         imageUrl: urls[cardCount % 5],
+//         onDismiss: appendNewCard,
+//         onLike: () => {
+//             like.style.animationPlayState = 'running';
+//             like.classList.toggle('trigger');
+//         },
+//         onDislike: () => {
+//             dislike.style.animationPlayState = 'running';
+//             dislike.classList.toggle('trigger');
+//         }
+//     });
+//     swiper.append(card.element);
+//     cardCount++;
+
+//     const cards = swiper.querySelectorAll('.card:not(.dismissing)');
+//     cards.forEach((card, index) => {
+//         card.style.setProperty('--i', index);
+//     });
+// }
+
+// // first 5 cards
+// for (let i = 0; i < 5; i++) {
+//     appendNewCard();
+// }
+
+// class Card {
+//     constructor({
+//         imageUrl,
+//         onDismiss,
+//         onLike,
+//         onDislike
+//     }) {
+//         this.imageUrl = imageUrl;
+//         this.onDismiss = onDismiss;
+//         this.onLike = onLike;
+//         this.onDislike = onDislike;
+//         this.#init();
+//     }
+
+//     // private properties
+//     #startPoint;
+//     #offsetX;
+//     #offsetY;
+
+//     function handleSwipe(cardIndex, direction) {
+//     const card = cards.value[cardIndex];
+//     if (direction === 'left') {
+//         // handle left swipe
+//     } else if (direction === 'right') {
+//         // handle right swipe
+//     }
+//     card.dismissing = true;
+
+//     // Remove card after animation
+//     setTimeout(() => {
+//         cards.value.splice(cardIndex, 1);
+//     }, 1000);
+// }
+
+function handleLike() {
+    // Your logic for a like
+}
+function handleRefresh() {
+    // Your logic for a like
+}
+function handleDislike() {
+    // Your logic for a like
+}
 
 </script>
 
 <template>
-    <div id="swiper">
-        <div class="card" style="--i:0">
-            <img src="https://source.unsplash.com/random/1000x1000/?sky" alt="">
+    <!-- <div id="swiper">
+        <div v-for="(card, index) in cards" :key="index" class="card" :class="{ dismissing: card.dismissing }">
+            <img :src="card.imageUrl" alt="">
         </div>
-        <div class="card" style="--i:1">
-            <img src="https://source.unsplash.com/random/1000x1000/?landscape" alt="">
+    </div> -->
+    <section class="parent-container">
+        <div id="swiper">
+            <div class="card" style="--i:0">
+                <img src="https://source.unsplash.com/random/1000x1000/?sky" alt="">
+            </div>
+            <div class="card" style="--i:1">
+                <img src="https://source.unsplash.com/random/1000x1000/?landscape" alt="">
+            </div>
+            <div class="card" style="--i:2">
+                <img src="https://source.unsplash.com/random/1000x1000/?ocean" alt="">
+            </div>
+            <div class="card" style="--i:3">
+                <img src="https://source.unsplash.com/random/1000x1000/?moutain" alt="">
+            </div>
+            <div class="card" style="--i:4">
+                <img src="https://source.unsplash.com/random/1000x1000/?forest" alt="">
+            </div>
         </div>
-        <div class="card" style="--i:2">
-            <img src="https://source.unsplash.com/random/1000x1000/?ocean" alt="">
-        </div>
-        <div class="card" style="--i:3">
-            <img src="https://source.unsplash.com/random/1000x1000/?moutain" alt="">
-        </div>
-        <div class="card" style="--i:4">
-            <img src="https://source.unsplash.com/random/1000x1000/?forest" alt="">
-        </div>
-    </div>
+    </section>
     <section style="width: 35rem; border: solid 2px black;"
         class="flex items-center justify-center py-3 mx-auto rounded-md bg-rose-100">
-        <div class="flex flex-col items-center">
+        <div class="flex flex-col items-center" @click="handleDislike">
             <svg style="width: 100px; height: 100px; background-color: oldlace; border-radius: 25%; border: solid 2px black;"
                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="red"
                 class="w-6 h-6 cursor-pointer transform active:shadow-sm active:translate-y-0.5 shadow-md hover:opacity-80">
@@ -33,7 +147,7 @@ import { HeartIcon, XMarkIcon } from '@heroicons/vue/24/outline';
             </svg>
             <span class="pt-2 font-bold">Dislike</span>
         </div>
-        <div class="flex flex-col items-center">
+        <div class="flex flex-col items-center" @click="handleLike">
             <svg style="width: 100px; height: 100px; background-color: oldlace; border-radius: 25%; border: solid 2px black;"
                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="green"
                 class="w-6 h-6 mx-24 cursor-pointer transform active:shadow-sm active:translate-y-0.5 shadow-md hover:opacity-80">
@@ -42,7 +156,7 @@ import { HeartIcon, XMarkIcon } from '@heroicons/vue/24/outline';
             </svg>
             <span class="pt-2 font-bold">Like</span>
         </div>
-        <div class="flex flex-col items-center">
+        <div class="flex flex-col items-center" @click="handleRefresh">
             <svg style="width: 100px; height: 100px; background-color: oldlace; border-radius: 25%; border: solid 2px black;"
                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                 class="w-6 h-6 cursor-pointer transform active:shadow-sm active:translate-y-0.5 shadow-md hover:opacity-80">
@@ -56,8 +170,15 @@ import { HeartIcon, XMarkIcon } from '@heroicons/vue/24/outline';
 </template>
 
 <style scoped>
+.parent-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70dvh;
+}
+
 #swiper {
-    height: 70vh;
+    height: 40lvh;
     aspect-ratio: 2 / 3;
     perspective: 1000px;
     perspective-origin: center 50%;
