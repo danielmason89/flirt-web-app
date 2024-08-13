@@ -9,10 +9,9 @@ resources:
 - repo: self
 
 variables:
-  # Container registry service connection established during pipeline creation
   dockerRegistryServiceConnection: 'a28a5f43-4015-49bf-8b19-b3d4733ae3e9'
-  imageRepository: 'flirtwebappfrontend'
-  containerRegistry: 'flirtfrontendcr.azurecr.io'
+  imageRepository: 'flirt-web-app'
+  containerRegistry: 'flirtfrontendcr.azurecr.io/flirt-web-app'
   dockerfilePath: '**/Dockerfile'
   tag: '$(Build.BuildId)'
 
@@ -35,6 +34,4 @@ stages:
         repository: $(imageRepository)
         dockerfile: $(dockerfilePath)
         containerRegistry: $(dockerRegistryServiceConnection)
-        tags: |
-          $(tag)
-          latest
+        tags: latest
