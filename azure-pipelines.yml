@@ -11,7 +11,7 @@ resources:
 variables:
   # Container registry service connection established during pipeline creation
   dockerRegistryServiceConnection: 'a28a5f43-4015-49bf-8b19-b3d4733ae3e9'
-  imageRepository: 'flirtwebappfrontend'
+  imageRepository: 'flirt-web-app'
   containerRegistry: 'flirtfrontendcr.azurecr.io'
   dockerfilePath: '**/Dockerfile'
   tag: '$(Build.BuildId)'
