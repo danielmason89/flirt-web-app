@@ -1,4 +1,70 @@
-# flirt-web-app
+<!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
+
+<a id="readme-top"></a>
+
+<!--
+*** Thanks for checking out the Best-README-Template. If you have a suggestion
+*** that would make this better, please fork the repo and create a pull request
+*** or simply open an issue with the tag "enhancement".
+*** Don't forget to give the project a star!
+*** Thanks again! Now go create something AMAZING! :D
+-->
+
+<!-- PROJECT SHIELDS -->
+<!--
+*** I'm using markdown "reference style" links for readability.
+*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
+*** See the bottom of this document for the declaration of the reference variables
+*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
+*** https://www.markdownguide.org/basic-syntax/#reference-style-links
+-->
+
+<br />
+<div align="center">
+
+# Flirt - A Fun Monster Preference Platform
+
+### 🃏 About the Project 🃏
+
+  <div align="center">
+    <p>Welcome to Flirt's GitHub Repo</p>
+    <p>A responsive web application where crypto enthusiasts, artists, and the monster-curious can dive deep into a rich, animated library.  
+    </div>
+    <br />
+    <br />
+    <a href="https://flirt-app.azurewebsites.net/">View Live</a>
+    &middot;
+    <a href="https://github.com/danielmason89/flirt-web-app/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
+    &middot;
+    <a href="https://github.com/danielmason89/flirt-web-app/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
+  </p>
+</div>
+
+[![Product Name Screen Shot][product-screenshot]](https://flirt-app.azurewebsites.net/)
+
+[product-screenshot]:
+
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#contribute">Contribute</a></li>
+    <li><a href="#acknowledgments">Acknowledgments</a></li>
+  </ol>
+</details>
 
 Flirt, is a responsive web application where crypto enthusiasts, artists, and the monster-curious can dive deep into a rich, animated library. Each creature is more than a picture; They have their own story with lore, sounds, and immersive details. Users swipe to express their awe or fear, shaping their journey through our crypto collection.
 
