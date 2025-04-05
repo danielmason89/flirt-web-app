@@ -42,7 +42,7 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://flirt-app.azurewebsites.net/)
 
-[product-screenshot]:
+[product-screenshot]: https://github.com/danielmason89/flirt-web-app/blob/c16126131baab5cc5aa18dd90ac31078fc7ba074/flirt_screenshot.png
 
 <!-- TABLE OF CONTENTS -->
 <details>
