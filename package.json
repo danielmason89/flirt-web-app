@@ -33,7 +33,7 @@
     "autoprefixer": "^10.4.20",
     "@vue/test-utils": "^2.4.6",
     "cypress": "^14.1.0",
-    "eslint": "^9.15.0",
+    "eslint": "^9.23.0",
     "eslint-plugin-cypress": "^4.2.0",
     "eslint-plugin-vue": "^9.32.0",
     "jsdom": "^26.0.0",
